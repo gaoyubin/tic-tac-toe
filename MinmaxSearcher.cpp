@@ -3,6 +3,7 @@
 #include<vector>
 #include<limits.h>
 #include"MinmaxSearcher.h"
+#include"GameState.h"
 MinmaxSearcher::MinmaxSearcher()
 {
 
@@ -38,11 +39,16 @@ int MinmaxSearcher::searchBestPlay(const GameState&state,int depth)
     if(bestCell.size()>0){
         bestPos=rand()%bestCell.size();
     }
+    std::cout<<bestPos<<std::endl;
     return bestCell[bestPos];
 }
 
-int MinmaxSearcher::minMaxAlphaBeta(const GameState& state,int depth,int a,int b,int maxPlayerId)
+int MinmaxSearcher::minMaxAlphaBeta(GameState& state,int depth,int a,int b,int maxPlayerId)
 {
+    if(state.isGameOver() || depth==0){
+        return state.evaluate(maxPlayerId);
+    }
+
     for(int i=0;i<BOARD_CELLS;i++){
         GameState tryState=state;
         if(tryState.isEmptyCell(i)){

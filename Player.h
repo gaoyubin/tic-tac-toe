@@ -7,6 +7,7 @@ public:
     Player() {}
     ~Player() {}
     void setPlayerName(const std::string& name){m_playerName=name;}
+    void setPlayerId(int id){m_playerId=id;}
     virtual int getNextPosition()=0;
     void setGameState(GameState*state){m_state=state;}
     GameState* getGameState(){return m_state;}

@@ -1,6 +1,28 @@
 #include <iostream>
 #include"GameState.h"
+#include<memory.h>
+GameState::GameState()
+{
+    m_evaluator=NULL;
+    memset(m_board,0,BOARD_CELLS*sizeof(int));
+}
 
+GameState::GameState(const GameState&state)
+{
+    m_evaluator=state.m_evaluator;
+    m_playerId=state.m_playerId;
+    memmove(m_board,state.m_board,BOARD_CELLS*sizeof(int));
+}
+
+
+GameState& GameState::operator=(const GameState&state)
+{
+    if(this!=&state){
+        m_evaluator=state.m_evaluator;
+        m_playerId=state.m_playerId;
+        memmove(m_board,state.m_board,BOARD_CELLS*sizeof(int));
+    }
+}
 void GameState::initGameState(int firstPlayer)
 {
     for(int i=0;i<BOARD_CELLS;i++){
@@ -82,5 +104,10 @@ int GameState::getWinner()
 bool GameState::isEmptyCell(int cell)const
 {
     return m_board[cell]==PLAYER_NULL;
+}
+
+int GameState::evaluate(int max_player_id)
+{
+    return m_evaluator->evaluate(*this,max_player_id);
 }
 

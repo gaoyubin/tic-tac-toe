@@ -5,6 +5,6 @@ public:
     MinmaxSearcher();
     virtual ~MinmaxSearcher();
     virtual int searchBestPlay(const GameState&state,int depth);
-    int minMaxAlphaBeta(const GameState& state,int depth,int a,int b,int maxPlayerId);
+    int minMaxAlphaBeta(GameState& state,int depth,int a,int b,int maxPlayerId);
         
 };

@@ -1,8 +1,12 @@
 #include <iostream>
 #include"GameControl.h"
+#include<memory.h>
 void GameControl::setPlayer(Player*player,int player_id)
 {
+    player->setGameState(&m_gameState);
+    player->setPlayerId(player_id);
     m_players[player_id]=player;
+
 }
 
 Player* GameControl::getPlayer(int player_id){

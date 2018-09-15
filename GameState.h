@@ -4,7 +4,8 @@
 class GameState
 {
 public:
-    GameState() {}
+    GameState();
+    GameState(const GameState&state);
     ~GameState() {}
     void setCurrentPlayer(int player_id){m_playerId=player_id;}
     int getCurrentPlayer() const{return m_playerId;}
@@ -21,6 +22,7 @@ public:
     void switchPlayer();
     bool isEmptyCell(int)const;
     int getGameCell(int cell){return m_board[cell];}
+    GameState& operator=(const GameState&state);
 private:
     Evaluator*m_evaluator;
     int m_playerId;
