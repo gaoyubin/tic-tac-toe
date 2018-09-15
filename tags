@@ -1,0 +1,91 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.6	//
+BOARD_CELLS	GameConst.h	/^const int BOARD_CELLS=BOARD_ROW*BOARD_COL;$/;"	v
+BOARD_COL	GameConst.h	/^const int BOARD_COL=3;$/;"	v
+BOARD_ROW	GameConst.h	/^const int BOARD_ROW=3;$/;"	v
+CELL_EMPTY	GameConst.h	/^const char CELL_EMPTY='_';$/;"	v
+CELL_O	GameConst.h	/^const char CELL_O='o';$/;"	v
+CELL_X	GameConst.h	/^const char CELL_X='x';$/;"	v
+ComputerPlayer	ComputerPlayer.cpp	/^ComputerPlayer::ComputerPlayer()$/;"	f	class:ComputerPlayer
+ComputerPlayer	ComputerPlayer.cpp	/^ComputerPlayer::ComputerPlayer(const std::string&name)$/;"	f	class:ComputerPlayer
+ComputerPlayer	ComputerPlayer.h	/^class ComputerPlayer:public Player$/;"	c
+DOUBLE_WEIGHT	GameConst.h	/^const int DOUBLE_WEIGHT=10;$/;"	v
+Evaluator	Evaluator.h	/^    Evaluator(){}$/;"	f	class:Evaluator
+Evaluator	Evaluator.h	/^class Evaluator$/;"	c
+FeEvaluator	FeEvaluator.cpp	/^FeEvaluator::FeEvaluator()$/;"	f	class:FeEvaluator
+FeEvaluator	FeEvaluator.h	/^class FeEvaluator :public Evaluator$/;"	c
+GameControl	GameControl.h	/^    GameControl() {}$/;"	f	class:GameControl
+GameControl	GameControl.h	/^class GameControl$/;"	c
+GameState	GameState.cpp	/^GameState::GameState() {}$/;"	f	class:GameState
+GameState	GameState.h	/^    GameState() {}$/;"	f	class:GameState
+GameState	GameState.h	/^class GameState$/;"	c
+HumanPlayer	HumanPlayer.cpp	/^HumanPlayer::HumanPlayer()$/;"	f	class:HumanPlayer
+HumanPlayer	HumanPlayer.cpp	/^HumanPlayer::HumanPlayer(const std::string&name)$/;"	f	class:HumanPlayer
+HumanPlayer	HumanPlayer.h	/^class HumanPlayer:public Player$/;"	c
+LINE_CELLS	GameConst.h	/^const int LINE_CELLS=3;$/;"	v
+LINE_DIRECTION	GameConst.h	/^const int LINE_DIRECTION=8;$/;"	v
+MinmaxSearcher	MinmaxSearcher.cpp	/^MinmaxSearcher::MinmaxSearcher()$/;"	f	class:MinmaxSearcher
+MinmaxSearcher	MinmaxSearcher.h	/^class MinmaxSearcher : public Searcher$/;"	c
+PLAYER_A	GameConst.h	/^const int PLAYER_A= 1;$/;"	v
+PLAYER_B	GameConst.h	/^const int PLAYER_B=2;$/;"	v
+PLAYER_NULL	GameConst.h	/^const int PLAYER_NULL= 0;$/;"	v
+Player	Player.h	/^    Player() {}$/;"	f	class:Player
+Player	Player.h	/^class  Player$/;"	c
+SEARCH_DEPTH	GameConst.h	/^const int SEARCH_DEPTH=6;$/;"	v
+Searcher	Searcher.h	/^class Searcher{$/;"	c
+cc	makefile	/^cc=g++ -std=c++11$/;"	m
+countPlayerChess	FeEvaluator.cpp	/^void  FeEvaluator::countPlayerChess(GameState&state,int player_id,int& countOne,int& countTwo,int& countThree)$/;"	f	class:FeEvaluator
+countThreeLine	GameState.cpp	/^int GameState::countThreeLine(int player_id)$/;"	f	class:GameState
+evaluate	FeEvaluator.cpp	/^int FeEvaluator::evaluate(GameState&state,int max_player_id)$/;"	f	class:FeEvaluator
+getCellType	GameState.cpp	/^char GameState::getCellType(int player_id)$/;"	f	class:GameState
+getCurrentPlayer	GameState.h	/^    int getCurrentPlayer() const{return m_playerId;}$/;"	f	class:GameState
+getGameCell	GameState.h	/^    int getGameCell(int cell){return m_board[cell];}$/;"	f	class:GameState
+getGameState	Player.h	/^    GameState* getGameState(){return m_state;}$/;"	f	class:Player
+getNextPosition	ComputerPlayer.cpp	/^int ComputerPlayer::getNextPosition()$/;"	f	class:ComputerPlayer
+getNextPosition	HumanPlayer.cpp	/^int HumanPlayer::getNextPosition()$/;"	f	class:HumanPlayer
+getPeerPlayer	GameConst.h	/^inline int getPeerPlayer(int player_id){return (player_id==PLAYER_A)?PLAYER_B:PLAYER_A;}$/;"	f
+getPlayer	GameControl.cpp	/^Player* GameControl::getPlayer(int player_id){$/;"	f	class:GameControl
+getWinner	GameState.cpp	/^int GameState::getWinner()$/;"	f	class:GameState
+initGameState	GameState.cpp	/^void GameState::initGameState(int firstPlayer)$/;"	f	class:GameState
+isEmptyCell	GameState.cpp	/^bool GameState::isEmptyCell(int cell)$/;"	f	class:GameState
+isGameOver	GameState.cpp	/^bool GameState::isGameOver()$/;"	f	class:GameState
+line_idx_tbl	GameConst.h	/^const int line_idx_tbl[LINE_DIRECTION][LINE_CELLS]={$/;"	v
+m_board	GameState.h	/^    int m_board[BOARD_CELLS];$/;"	m	class:GameState
+m_depth	ComputerPlayer.h	/^    int m_depth;$/;"	m	class:ComputerPlayer
+m_evaluator	GameState.h	/^    Evaluator*m_evaluator;$/;"	m	class:GameState
+m_gameState	GameControl.h	/^    GameState m_gameState;$/;"	m	class:GameControl
+m_playerId	GameState.h	/^    int m_playerId;$/;"	m	class:GameState
+m_playerId	Player.h	/^    int m_playerId;$/;"	m	class:Player
+m_playerName	Player.h	/^    std::string m_playerName;$/;"	m	class:Player
+m_players	GameControl.h	/^    std::map<int,Player*>m_players;$/;"	m	class:GameControl
+m_searcher	ComputerPlayer.h	/^    Searcher* m_searcher;$/;"	m	class:ComputerPlayer
+m_state	Player.h	/^    GameState*m_state;$/;"	m	class:Player
+main	tic-tac-toe.cpp	/^int main(){$/;"	f
+minMaxAlphaBeta	MinmaxSearcher.cpp	/^int MinmaxSearcher::minMaxAlphaBeta(const GameState& state,int depth,int a,int b,int maxPlayerId)$/;"	f	class:MinmaxSearcher
+obj	makefile	/^obj=$(src:%.cpp=%.o)$/;"	m
+printGame	GameState.cpp	/^void GameState::printGame()$/;"	f	class:GameState
+run	GameControl.cpp	/^void GameControl::run()$/;"	f	class:GameControl
+searchBestPlay	MinmaxSearcher.cpp	/^int MinmaxSearcher::searchBestPlay(const GameState&state,int depth)$/;"	f	class:MinmaxSearcher
+setCurrentPlayer	GameState.h	/^    void setCurrentPlayer(int player_id){m_playerId=player_id;}$/;"	f	class:GameState
+setEvaluator	GameState.h	/^    void setEvaluator(Evaluator*evaluator){m_evaluator=evaluator;}$/;"	f	class:GameState
+setGameCell	GameState.cpp	/^void GameState::setGameCell(int cell,int player_id)$/;"	f	class:GameState
+setGameState	Player.h	/^    void setGameState(GameState*state){m_state=state;}$/;"	f	class:Player
+setPlayer	GameControl.cpp	/^void GameControl::setPlayer(Player*player,int player_id)$/;"	f	class:GameControl
+setPlayerName	Player.h	/^    void setPlayerName(const std::string& name){m_playerName=name;}$/;"	f	class:Player
+setSearcher	ComputerPlayer.cpp	/^void ComputerPlayer::setSearcher(Searcher* searcher,int depth)$/;"	f	class:ComputerPlayer
+src	makefile	/^src=$(shell find .\/ -name "*.cpp")$/;"	m
+switchPlayer	GameState.cpp	/^void GameState::switchPlayer()$/;"	f	class:GameState
+target	makefile	/^target=tic-tac-toe$/;"	m
+~ComputerPlayer	ComputerPlayer.cpp	/^ComputerPlayer::~ComputerPlayer()$/;"	f	class:ComputerPlayer
+~Evaluator	Evaluator.h	/^    virtual ~Evaluator(){}$/;"	f	class:Evaluator
+~FeEvaluator	FeEvaluator.cpp	/^FeEvaluator::~FeEvaluator()$/;"	f	class:FeEvaluator
+~GameControl	GameControl.h	/^    ~GameControl() {}$/;"	f	class:GameControl
+~GameState	GameState.cpp	/^GameState::~GameState() {}$/;"	f	class:GameState
+~GameState	GameState.h	/^    ~GameState() {}$/;"	f	class:GameState
+~HumanPlayer	HumanPlayer.cpp	/^HumanPlayer::~HumanPlayer()$/;"	f	class:HumanPlayer
+~MinmaxSearcher	MinmaxSearcher.cpp	/^MinmaxSearcher::~MinmaxSearcher()$/;"	f	class:MinmaxSearcher
+~Player	Player.h	/^    ~Player() {}$/;"	f	class:Player
