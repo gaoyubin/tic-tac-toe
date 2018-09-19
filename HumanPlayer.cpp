@@ -17,6 +17,9 @@ HumanPlayer::~HumanPlayer()
 
 int HumanPlayer::getNextPosition()
 {
-    return 1;
+	std::cout<<"please input :"<<std::endl;
+	int row,col;
+	std::cin>>row>>col;
+	return row*BOARD_COL+col;
 }
 
